@@ -1,5 +1,5 @@
-# Write a Python program to demonstrate the concept of variable length argument to 
-# calculate the product and power of the first 10 numbers.
+# Write a Python program to demonstrate the concept of variable length argument
+# to calculate the product and power of the first 10 numbers.
 
 
 def cproduct(*args):
