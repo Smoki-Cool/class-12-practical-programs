@@ -2,8 +2,7 @@
 
 import random
 
-def generator():
-    return random.randint(1, 6)
+def generator(): return random.randint(1, 6)
 
 random_n = generator()
 print(random_n)
