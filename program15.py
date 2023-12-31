@@ -1,4 +1,6 @@
-def is_empty(stack) -> bool:
+# Write a program to implement stack in python using list.
+
+def is_empty(stack: list) -> bool:
     '''
     Checks if the stack is empty.
     '''
@@ -7,7 +9,7 @@ def is_empty(stack) -> bool:
     else:
         return False
 
-def push(item, stack):
+def push(item, stack: list):
     '''
     Pushes an element to the top of stack.
     '''
@@ -17,7 +19,7 @@ def push(item, stack):
     print("Pushed an element.")
     top += 1
 
-def pop(stack):
+def pop(stack: list):
     '''
     Pops an element from the top of stack and returns it.
     '''
@@ -32,7 +34,7 @@ def pop(stack):
     
     return item
 
-def peek(stack):
+def peek(stack: list):
     '''
     Returns the top element of stack without popping.
     '''
@@ -40,7 +42,7 @@ def peek(stack):
         return "Underflow."
     return stack[top]
 
-def display(stack):
+def display(stack: list):
     '''
     Displays the entire stack.
     '''

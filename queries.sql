@@ -1,17 +1,17 @@
--- 1. Create a database MOVIE_DATABASE
+-- 1. Create a database MOVIE_DATABASE.
 CREATE database MOVIE_DATABASE;
 
 -- In MOVIE_DATABASE,
-use MOVIE_DATABASE;
+USE MOVIE_DATABASE;
 
--- a) Create a table MOVIE with below columns
+-- a) Create a table MOVIE with below columns:
 -- Movie_ID with fixed length of 5
 -- Movie_Name with variable length of 50
 -- Type to store the type of movie with variable length of 20
 -- Release_Date to store the release date.
 -- Production_cost as integer to store the production cost in dollar.
 -- Collection as integer to store the total collection in dollar.
--- Review as of type variable length string of 200, make the column to not allow null values
+-- Review as of type variable length string of 200, make the column to not allow null values.
 CREATE TABLE MOVIE (
     Movie_ID CHAR(5) PRIMARY KEY,
     Movie_Name VARCHAR(50),
@@ -57,14 +57,14 @@ SELECT DISTINCT Type FROM MOVIE;
 SELECT Movie_ID, Movie_Name, (Collection - Production_Cost) AS Profit FROM MOVIE;
 
 --   iv. Display movieid, moviename and productioncost for all movies with productioncost 
---       greater than 135,000,000 and less than 960,000,000 .
+--       greater than 135,000,000 and less than 960,000,000
 SELECT Movie_ID, Movie_Name, Production_Cost FROM MOVIE
 WHERE Production_Cost BETWEEN 135000000 AND 960000000;
 
 --    v. Display the movie of type action and drama.
 SELECT * FROM MOVIE WHERE Type IN ('Action', 'Drama');
 
---   vi. Display the list of movies which were released in May and July of year 2008.
+--   vi. Display the list of movies which were released in May and July of year 2008
 SELECT * FROM MOVIE
 WHERE (MONTH(Release_Date) = 5 OR MONTH(Release_Date) = 7) AND YEAR(Release_Date) = 2008;
 
@@ -116,7 +116,7 @@ SELECT M.Movie_Name, R.Rating
 FROM Movie M JOIN Review R ON M.Movie_ID = R.Movie_ID
 WHERE R.Rating > 7;
 
---   ii. Find out the rating and movie id of the movies which have collection more than 130000000.
+--   ii. Find out the rating and movie id of the movies which have collection more than 130000000
 SELECT R.Movie_ID, R.Rating
 FROM Review R JOIN Movie M ON R.Movie_ID = M.Movie_ID
 WHERE M.Collection > 130000000;

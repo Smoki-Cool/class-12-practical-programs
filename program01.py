@@ -9,7 +9,7 @@ def factorial(n: int):
 
 try:
     n = int(input("Enter your number: "))
-    print(f"{n}! = {factorial(n)}")
+    print("{0}! = {1}".format(n, factorial(n)))
     
 except ValueError:
     print("Number must be an integer.")
