@@ -1,9 +1,7 @@
 # Create a binary file “Employee.dat” with emp id, name and salary. Write a function 
 # Update_Sal(empid), receive an employee id and update the salary.
 
-
 import pickle
-
 
 def create():
     empdata = {
@@ -17,7 +15,6 @@ def create():
     with open('Employee.dat', 'wb') as file:
         pickle.dump(empdata, file)
 
-
 def update_salary(empid, new_salary):
     try:
         with open('Employee.dat', 'rb') as file:
@@ -26,12 +23,11 @@ def update_salary(empid, new_salary):
                 data[empid]['Salary'] = new_salary
                 with open('Employee.dat', 'wb') as file:
                     pickle.dump(data, file)
-                	print(f"Salary updated for Employee ID {empid}")
+                	print("Salary updated for Employee ID", empid)
             else:
                 print("Employee ID not found.")
     except FileNotFoundError:
         print("Employee data file not found.")
-
 
 create()
 
