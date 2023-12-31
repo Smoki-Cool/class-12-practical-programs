@@ -1,14 +1,18 @@
+# Write a Python Program to create a Database named “Store”.
+# Display the List of Databases available in MySQL.
+
+
 import mysql.connector as connector
 
-conn = connector.connect(
-    host='localhost',
-    user='root',
-    password='root'
-)
-
-cur = conn.cursor()
-
 try:
+    conn = connector.connect(
+        host='localhost',
+        user='root',
+        password='root'
+    )
+    
+    cur = conn.cursor()
+
     cur.execute("CREATE DATABASE IF NOT EXISTS Store")
 
     cur.execute("SHOW DATABASES")
@@ -22,5 +26,6 @@ except connector.Error as err:
     print("Error:", err)
 
 finally:
-    cur.close()
-    conn.close()
+    if conn.is_connected():
+        cur.close()
+        conn.close()
