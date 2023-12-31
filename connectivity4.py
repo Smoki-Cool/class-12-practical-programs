@@ -43,5 +43,5 @@ def increase_price(percent):
             cur.close()
             conn.close()
           
-percent = float(input("Enter the percentage by which you want to change the price: ))
+percent = float(input("Enter the percentage by which you want to change the price: "))
 increase_price(percent)
