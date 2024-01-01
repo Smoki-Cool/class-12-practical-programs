@@ -58,3 +58,10 @@ def display(stack: list):
 
 stack = []
 top = -1
+
+push(19, stack)
+push(100, stack)
+push(0, stack)
+print("Popped element:", pop(stack))
+print("Peeking stack:", peek(stack))
+display(stack)
