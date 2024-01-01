@@ -114,7 +114,7 @@ Replace `program_name.py` with the name of the Python file you want to run.
      ```
 
 > [!WARNING]
-> The Review table creation queries needed to run the last sets of queries is not provided in the script.
+> The `Review` table creation queries needed to run the last sets of queries is not provided in the script.
 
 ## License
 
