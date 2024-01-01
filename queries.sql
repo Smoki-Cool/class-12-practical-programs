@@ -13,7 +13,7 @@ USE MOVIE_DATABASE;
 -- Collection as integer to store the total collection in dollar.
 -- Review as of type variable length string of 200, make the column to not allow null values.
 CREATE TABLE MOVIE (
-    Movie_ID CHAR(5) PRIMARY KEY,
+    Movie_ID CHAR(5),
     Movie_Name VARCHAR(50),
     Type VARCHAR(20),
     Release_Date DATE,
