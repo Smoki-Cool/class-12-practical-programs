@@ -7,15 +7,13 @@ try:
 
     else:
         terms = ['0', '1']
-        sum = 1 
   
         for i in range(1, n-1):
             a = int(terms[i-1]) 
             b = int(terms[i]) 
             next = a + b 
   
-            terms.append(str(next)) 
-            sum += next 
+            terms.append(str(next))
  
         print('Fabonacci series:', ", ".join(terms))
 
